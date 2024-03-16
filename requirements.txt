@@ -1,0 +1,4 @@
+googletrans
+youtube_dl
+youtube_transcript_api
+pandas
