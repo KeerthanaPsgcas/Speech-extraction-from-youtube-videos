@@ -1,10 +1,21 @@
+#Version 1 :
+"""
+Extracting the transcript from the youtube video and saving it in a CSV file,
+Translating the transcript to English if the original text is not in English
+#NOTE: FOCUSES ON THE VIDEO THAT HAS CAPTIONS .
+IF THE VIDEO DOESN'T HAVE CAPTIONS, THEN THE TRANSCRIPT WILL BE EMPTY.
+UPDATED VERSION IN THE NEXT FILE
+"""
+
+
+
 from googletrans import Translator, LANGUAGES
 import youtube_dl
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 
 # Define your YouTube playlist URL
-playlist_url = "https://www.youtube.com/playlist?list=PLBG6UuYpOcTuLNtjOJbECErr--_6y2K5b&hl=en"
+playlist_url = "https://www.youtube.com/playlist?list=PLk_Jw3TebqxBqkHI71QhyECXK0vQl2TzZ=en"
 
 # Initialize the translator
 translator = Translator()
