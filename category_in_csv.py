@@ -45,7 +45,7 @@ def get_transcript(video_id):
     return ""
 
 def get_video_category_title(video_id):
-    youtube = build('youtube', 'v3', developerKey='AIzaSyDbXBASt0vgzaX9YI581LDD2FXe3wFs_Hc')
+    youtube = build('youtube', 'v3', developerKey='API_KEY')
     request = youtube.videos().list(part='snippet', id=video_id)
     response = request.execute()
     if 'items' in response:
@@ -55,7 +55,7 @@ def get_video_category_title(video_id):
     return None
 
 def fetch_category_title(category_id):
-    youtube = build('youtube', 'v3', developerKey='AIzaSyDbXBASt0vgzaX9YI581LDD2FXe3wFs_Hc')
+    youtube = build('youtube', 'v3', developerKey='API_KEY')
     request = youtube.videoCategories().list(part='snippet', id=category_id)
     response = request.execute()
     if 'items' in response:
